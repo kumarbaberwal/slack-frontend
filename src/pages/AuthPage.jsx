@@ -17,7 +17,7 @@ const AuthPage = () => {
             Connect with your team instantly through secure, real-time messaging. Experience seamless collaboration with
             powerful features designed for modern teams.
           </p>
-          <div className="feature-list">
+          <div className="features-list">
             <div className="feature-item">
               <span className="feature-icon">💬</span>
               <span className="">Real-time messaging</span>
@@ -34,6 +34,22 @@ const AuthPage = () => {
             </div>
 
           </div>
+
+          <SignInButton mode="modal">
+            <button className="cta-button">
+              Get Started with Slap
+              <span className="button-arrow">
+                →
+              </span>
+            </button>
+          </SignInButton>
+        </div>
+      </div>
+
+      <div className="auth-right">
+        <div className="auth-image-container">
+          <img src="/auth-i.png" alt="Team collaboration" className="auth-image" />
+          <div className="image-overlay"></div>
         </div>
       </div>
     </div>
