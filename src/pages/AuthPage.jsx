@@ -5,7 +5,9 @@ import React from 'react'
 const AuthPage = () => {
   return (
     <div className="auth-container">
+
       <div className="auth-left">
+
         <div className="auth-hero">
 
           <div className="brand-container">
@@ -52,6 +54,8 @@ const AuthPage = () => {
           <div className="image-overlay"></div>
         </div>
       </div>
+
+
     </div>
   )
 }
