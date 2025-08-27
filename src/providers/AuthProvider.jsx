@@ -18,6 +18,8 @@ export default function AuthProvider({ children }) {
             config.headers.Authorization = `Bearer ${token}`;
           }
 
+          console.log("Token added to request:", token);
+
         } catch (error) {
           if (error.message?.includes("auth") || error.message?.includes("token")) {
             toast.error("Authentication issue. Please refresh the page.");
