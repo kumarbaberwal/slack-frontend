@@ -24,7 +24,8 @@ const CreateChannelModal = ({ onClose }) => {
       setLoadingUsers(true);
       try {
         const response = await client.queryUsers({ id: { $ne: client.user.id } }, { name: 1 }, { limit: 100 });
-        setUsers(response.users || []);
+        const usersOnly = response.users.filter(u => !u.id.startsWith("recording-"));
+        setUsers(usersOnly);
       } catch (error) {
         console.error("Failed to fetch users", error);
         setError("Failed to fetch users");
