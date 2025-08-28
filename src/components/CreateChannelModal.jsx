@@ -37,14 +37,6 @@ const CreateChannelModal = ({ onClose }) => {
     fetchUsers();
   }, [client])
 
-  useEffect(() => {
-    setChannelName("");
-    setChannelType("public");
-    setDescription("");
-    setError(null);
-    setSelectedMembers([]);
-  }, [])
-
 
   useEffect(() => {
     if (channelType === "public") setSelectedMembers(users.map(u => u.id));
@@ -104,7 +96,7 @@ const CreateChannelModal = ({ onClose }) => {
         channelData.visiblitity = "private";
       } else {
         channelData.visibility = "public";
-        channelData.discovarable = true;
+        channelData.discoverable = true;
       }
 
       const channel = client.channel("messaging", channelId, channelData);
